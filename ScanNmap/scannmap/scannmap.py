@@ -17,10 +17,12 @@ cidr2='192.168.0.1-254'
 a=nm.scan(hosts=cidr2, arguments='-sP')
 
 for k,v in a['scan'].iteritems():
-    if str(v['status']['state']) == 'up':
+    #if str(v['status']['state']) == 'up':
         #print str(v)
-        try:
-            endMac = str(v['addresses']['mac'])
-            if macs.has_key(endMac):
+    try:
+        endMac = str(v['addresses']['mac'])
+        if macs.has_key(endMac):
                 print macs[endMac]
-        except: print str(v['addresses']['ipv4']) 
+        elif endMac != macs:
+            print endMac
+    except: print 'Este dispositivo' 
