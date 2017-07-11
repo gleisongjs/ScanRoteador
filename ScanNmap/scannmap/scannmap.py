@@ -9,7 +9,7 @@ import nmap
 import twitter
 
 #Dicionário de macs
-macs = {'C4:36:6C:65:A8:9E':'TV', '04:4B:ED:72:22:F2':'My love', 'E4:9A:79:1B:E1:DD':'Gleison', 
+macs = {'C4:36:6C:65:A8:9E':'Televisão', '04:4B:ED:72:22:F2':'Verônica', 'E4:9A:79:1B:E1:DD':'Gleison', 
 '90:8D:6C:72:96:FC':'Ipad', '00:01:02:03:04:05':'Arduino', '5c:c9:d3:3a:d0:07':'Asus', '64:31:50:FF:0B:39':'Servidor',
 '4C:D0:8A:AB:18:7C':'Roteador'}
 
@@ -43,13 +43,18 @@ for k,v in a['scan'].iteritems():
             aux = 2
            
     except: print 'Este dispositivo' 
+
+#jeito eficiente de concatenar string
+dispositivosConhecidos = ', '.join(dispositivosConhecidos)
+dispositivosDesconhecidos = ', '.join(dispositivosDesconhecidos)
 #print dispositivosConhecidos
 #print dispositivosDesconhecidos
 
+#Twitando 
 if aux == 1:
-    status = api.PostUpdate('''@GleisonJSilva os dispositivos estão utilizando a rede: '''+dispositivosConhecidos)
+    status = api.PostUpdate('''@GleisonJSilva os seguintes dispositivos estão utilizando a rede: '''+dispositivosConhecidos)
     print status.text
 elif aux==2:
-    status = api.PostUpdate('@GleisonJSilva não conhecemos o dispositivo: '+ dispositivosDesconhecidos +'- Ele está utilizando a rede agora.')
+    status = api.PostUpdate('@GleisonJSilva não conhecemos o dispositivo: '+ dispositivosDesconhecidos +' - Ele está utilizando a rede agora.')
     print status.text
    
