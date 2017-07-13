@@ -10,7 +10,7 @@ import twitter
 
 #Dicionário de macs
 macs = {'C4:36:6C:65:A8:9E':'Televisão', '04:4B:ED:72:22:F2':'Verônica', 'E4:9A:79:1B:E1:DD':'Gleison', 
-'90:8D:6C:72:96:FC':'Ipad', '00:01:02:03:04:05':'Arduino', '5c:c9:d3:3a:d0:07':'Asus', '64:31:50:FF:0B:39':'Servidor',
+'90:8D:6C:72:96:FC':'Ipad', '00:01:02:03:04:05':'Sistema Layla', '5c:c9:d3:3a:d0:07':'Asus', '64:31:50:FF:0B:39':'Servidor',
 '4C:D0:8A:AB:18:7C':'Roteador'}
 
 dispositivosConhecidos = []
