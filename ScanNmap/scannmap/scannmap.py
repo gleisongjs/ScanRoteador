@@ -23,7 +23,7 @@ consumer_secret='oLgaI8Ia9HwZ2gPjQItTNIRiQiHkgRsvs4IxNl3gUX00EJ2Kzp',
 access_token_key='832896102366068736-YtZwU7fMsHLuWYPhZLktZug8oTx7ua6',
 access_token_secret='wSNwxnqIeJYoyQZAATOPruT6NcoGizJY8ENrk7JUZ9qId')
 
-#dados da minha rede
+#Buscando os dispositivos conectados da minha rede
 nm = nmap.PortScanner()
 cidr2='192.168.0.1-254'
 
