@@ -12,7 +12,7 @@ import twitter
 macs = {'C4:36:6C:65:A8:9E':'Televisão', '04:4B:ED:72:22:F2':'Verônica', 'E4:9A:79:1B:E1:DD':'Gleison', 
 '90:8D:6C:72:96:FC':'Ipad', '00:01:02:03:04:05':'Sistema Layla', '5c:c9:d3:3a:d0:07':'Asus', '64:31:50:FF:0B:39':'Servidor',
 '4C:D0:8A:AB:18:7C':'Roteador', 'E4:9A:79:1A:9C:14':'Reginaldo', 'E4:9A:79:23:CD:58':'Andressa', '28:83:35:11:35:5F':'Gleicielle',
-'14:A3:64:27:FF:41':'Mãe', '30:C7:AE:B7:A2:A0':'Jonas', 'AC:5F:3E:A9:16:25':'Bruna Rubinger'}
+'14:A3:64:27:FF:41':'Mãe', '30:C7:AE:B7:A2:A0':'Jonas', 'AC:5F:3E:A9:16:25':'Bruna Rubinger', '28:83:35:B1:F0:9D':'Gleiciane'}
 
 dispositivosConhecidos = []
 dispositivosDesconhecidos = []
