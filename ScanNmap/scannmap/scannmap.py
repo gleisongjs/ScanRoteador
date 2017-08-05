@@ -9,11 +9,11 @@ import nmap
 import twitter
 
 #Dicionário de macs
-macs = {'C4:36:6C:65:A8:9E':'Televisão', '04:4B:ED:72:22:F2':'Verônica', 'E4:9A:79:1B:E1:DD':'Gleison', 
-'90:8D:6C:72:96:FC':'Ipad', '00:01:02:03:04:05':'Sistema Layla', '5C:C9:D3:3A:D0:07':'Asus', '64:31:50:FF:0B:39':'Servidor',
-'4C:D0:8A:AB:18:7C':'Roteador', 'E4:9A:79:1A:9C:14':'Reginaldo', 'E4:9A:79:23:CD:58':'Andressa', '28:83:35:11:35:5F':'Gleicielle',
+macs = {'C4:36:6C:65:A8:9E':'', '04:4B:ED:72:22:F2':'Verônica', 'E4:9A:79:1B:E1:DD':'Gleison', 
+'90:8D:6C:72:96:FC':'', '00:01:02:03:04:05':'Sistema Layla', '5C:C9:D3:3A:D0:07':'', '64:31:50:FF:0B:39':'Servidor',
+'4C:D0:8A:AB:18:7C':'', 'E4:9A:79:1A:9C:14':'Reginaldo', 'E4:9A:79:23:CD:58':'Andressa', '28:83:35:11:35:5F':'Gleicielle',
 '14:A3:64:27:FF:41':'Mãe', '30:C7:AE:B7:A2:A0':'Jonas', 'AC:5F:3E:A9:16:25':'Bruna Rubinger', '28:83:35:B1:F0:9D':'Gleiciane', 
-'E4:58:E7:B3:DE:C7':'Manicure'}
+'E4:58:E7:B3:DE:C7':'Manicure', '68:76:4F:0F:EA:F7':'Evellyn'}
 
 dispositivosConhecidos = []
 dispositivosDesconhecidos = []
@@ -27,6 +27,9 @@ access_token_secret='wSNwxnqIeJYoyQZAATOPruT6NcoGizJY8ENrk7JUZ9qId')
 #Buscando os dispositivos conectados da minha rede
 nm = nmap.PortScanner()
 cidr2='192.168.0.1-254'
+
+# rede da facul
+#cidr2='10.1.4.0-254'
 
 a=nm.scan(hosts=cidr2, arguments='-sP')
 
