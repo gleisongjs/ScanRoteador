@@ -48,7 +48,7 @@ for k,v in a['scan'].iteritems():
         if macs.has_key(endMac):
             
             dispositivo = macs[endMac]
-            if dispositivo != a or b or c or d:
+            if dispositivo != a and b and c and d:
                 dispositivosConhecidos.append(dispositivo)
                 #print dispositivo 
                 aux = 1
