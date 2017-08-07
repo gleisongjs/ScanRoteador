@@ -22,7 +22,7 @@ macs = {'04:4B:ED:72:22:F2':'Verônica',
 '28:83:35:B1:F0:9D':'Gleiciane', 
 'E4:58:E7:B3:DE:C7':'Manicure',
 '68:76:4F:0F:EA:F7':'Evellyn',
-'C4:36:6C:65:A8:9E':'', '90:8D:6C:72:96:FC':'', '5C:C9:D3:3A:D0:07':'', '4C:D0:8A:AB:18:7C':'',}
+'C4:36:6C:65:A8:9E':'a', '90:8D:6C:72:96:FC':'b', '5C:C9:D3:3A:D0:07':'c', '4C:D0:8A:AB:18:7C':'d',}
 
 dispositivosConhecidos = []
 dispositivosDesconhecidos = []
@@ -45,11 +45,13 @@ a=nm.scan(hosts=cidr2, arguments='-sP')
 for k,v in a['scan'].iteritems():
     try:
         endMac = str(v['addresses']['mac'])
-        if macs.has_key(endMac):            
+        if macs.has_key(endMac):
+            
             dispositivo = macs[endMac]
-            dispositivosConhecidos.append(dispositivo)
-            #print dispositivo 
-            aux = 1
+            if dispositivo != a or b or c or d:
+                dispositivosConhecidos.append(dispositivo)
+                #print dispositivo 
+                aux = 1
         elif endMac != macs:
             dispositivo = endMac
             dispositivosDesconhecidos.append(dispositivo)
