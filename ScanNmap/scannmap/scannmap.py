@@ -22,7 +22,7 @@ macs = {'04:4B:ED:72:22:F2':'Verônica',
 '28:83:35:B1:F0:9D':'Gleiciane', 
 'E4:58:E7:B3:DE:C7':'Manicure',
 '68:76:4F:0F:EA:F7':'Evellyn',
-'C4:36:6C:65:A8:9E':'a', '90:8D:6C:72:96:FC':'b', '5C:C9:D3:3A:D0:07':'c', '4C:D0:8A:AB:18:7C':'d',}
+'C4:36:6C:65:A8:9E':'tv', '90:8D:6C:72:96:FC':'ipad', '5C:C9:D3:3A:D0:07':'asus', '4C:D0:8A:AB:18:7C':'roteador',}
 
 dispositivosConhecidos = []
 dispositivosDesconhecidos = []
@@ -46,12 +46,12 @@ for k,v in a['scan'].iteritems():
     try:
         endMac = str(v['addresses']['mac'])
         if macs.has_key(endMac):
-            
             dispositivo = macs[endMac]
-            if dispositivo != a and b and c and d:
+            if dispositivo != 'tv' and 'roteador' and 'ipad': #tratando os dispositivos fixos, televisão, roteador, asus e ipad
                 dispositivosConhecidos.append(dispositivo)
-                #print dispositivo 
                 aux = 1
+                #print dispositivo 
+            
         elif endMac != macs:
             dispositivo = endMac
             dispositivosDesconhecidos.append(dispositivo)
